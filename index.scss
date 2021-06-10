@@ -1,0 +1,72 @@
+$redorange: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$lightgraytext: hsl(240, 2%, 79%);
+$lightred: hsl(356, 100%, 66%);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+}
+header {
+    background: $redorange;
+    height: 45vh;
+    border-bottom-left-radius: 5rem;
+    menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0;
+        .logo {
+            height: 45px;
+            width: 105px;
+            background: url("./images/logo.svg") no-repeat;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $lightgraytext;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    #hero {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 4rem;
+        }
+        h4 {
+            color: $lightgraytext
+        }
+        .dark {
+            border: 1px solid white;
+        }
+    }
+}
+.cta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    .cta {
+        padding: .5rem .75rem;
+        margin: 0 .5rem;
+        border-radius: 1.25rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: small;
+    }
+}
+
+.light {
+    background: white;
+    color: $lightred;
+}

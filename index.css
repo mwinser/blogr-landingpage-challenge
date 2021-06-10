@@ -1,3 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  height: 45vh;
+  border-bottom-left-radius: 5rem;
+}
+header menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+header menu .logo {
+  height: 45px;
+  width: 105px;
+  background: url("./images/logo.svg") no-repeat;
+}
+header menu nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c8c8cb;
+  font-weight: bold;
+  font-size: 14px;
+}
+header #hero {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header #hero h1 {
+  font-size: 4rem;
+}
+header #hero h4 {
+  color: #c8c8cb;
+}
+header #hero .dark {
+  border: 1px solid white;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.cta-container .cta {
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.5rem;
+  border-radius: 1.25rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: small;
+}
+
+.light {
+  background: white;
+  color: #ff525d;
+}
 
 /*# sourceMappingURL=index.css.map */
