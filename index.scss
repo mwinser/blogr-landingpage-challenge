@@ -1,6 +1,9 @@
 $redorange: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$blueblue: linear-gradient(90deg,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 $lightgraytext: hsl(240, 2%, 79%);
+$bodytext:  hsl(207, 13%, 34%);
 $lightred: hsl(356, 100%, 66%);
+$darkblue: hsl(208, 49%, 24%);
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +18,12 @@ header {
     background: $redorange;
     height: 45vh;
     border-bottom-left-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     menu {
+        width: 80vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,6 +32,7 @@ header {
             height: 45px;
             width: 105px;
             background: url("./images/logo.svg") no-repeat;
+            margin-right: 3rem;
         }
         nav {
             display: flex;
@@ -32,6 +41,7 @@ header {
             color: $lightgraytext;
             font-weight: bold;
             font-size: 14px;
+            flex-grow: 1;
         }
     }
     #hero {
@@ -44,7 +54,8 @@ header {
             font-size: 4rem;
         }
         h4 {
-            color: $lightgraytext
+            color: $lightgraytext;
+            font-weight: normal; 
         }
         .dark {
             border: 1px solid white;
@@ -57,16 +68,59 @@ header {
     align-items: center;
     padding: 1rem 0;
     .cta {
-        padding: .5rem .75rem;
+        padding: 1rem;
         margin: 0 .5rem;
-        border-radius: 1.25rem;
+        border-radius: 1.75rem;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
-        font-size: small;
+        font-size: medium;
     }
 }
 
 .light {
     background: white;
     color: $lightred;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0;
+    color: $bodytext;
+    section {
+        padding: 0 10rem;
+        h1 {
+            margin: 3rem 0;
+            color: $darkblue;
+            text-align: center;
+            font-size: 2rem;
+        }
+        h3 {
+            margin: 1.5rem 0;
+            color: $darkblue;
+            font-weight: 800;
+        }
+        p {
+            margin: 1.5rem 0 5rem 0;
+            width: 45%;
+        }
+
+    }
+    .blue-section {
+        background: url('./images/bg-pattern-circles.svg') no-repeat -20% 70% / 50%, $blueblue;
+        color: $lightgraytext;
+        border-radius: 0 5rem 0 5rem;
+        h1 {
+            color: white;
+        }
+    }
+}
+
+footer {
+    height: 33vh;
+    background: hsl(240, 10%, 16%);
+    color: $lightgraytext;
+    border-top-right-radius: 5rem;
 }

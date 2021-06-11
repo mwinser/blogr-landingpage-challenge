@@ -13,8 +13,13 @@ header {
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
   height: 45vh;
   border-bottom-left-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 header menu {
+  width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +29,7 @@ header menu .logo {
   height: 45px;
   width: 105px;
   background: url("./images/logo.svg") no-repeat;
+  margin-right: 3rem;
 }
 header menu nav {
   display: flex;
@@ -32,6 +38,7 @@ header menu nav {
   color: #c8c8cb;
   font-weight: bold;
   font-size: 14px;
+  flex-grow: 1;
 }
 header #hero {
   color: white;
@@ -45,6 +52,7 @@ header #hero h1 {
 }
 header #hero h4 {
   color: #c8c8cb;
+  font-weight: normal;
 }
 header #hero .dark {
   border: 1px solid white;
@@ -57,17 +65,59 @@ header #hero .dark {
   padding: 1rem 0;
 }
 .cta-container .cta {
-  padding: 0.5rem 0.75rem;
+  padding: 1rem;
   margin: 0 0.5rem;
-  border-radius: 1.25rem;
+  border-radius: 1.75rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: small;
+  font-size: medium;
 }
 
 .light {
   background: white;
   color: #ff525d;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem 0;
+  color: #4b5862;
+}
+main section {
+  padding: 0 10rem;
+}
+main section h1 {
+  margin: 3rem 0;
+  color: #1f3f5b;
+  text-align: center;
+  font-size: 2rem;
+}
+main section h3 {
+  margin: 1.5rem 0;
+  color: #1f3f5b;
+  font-weight: 800;
+}
+main section p {
+  margin: 1.5rem 0 5rem 0;
+  width: 45%;
+}
+main .blue-section {
+  background: url("./images/bg-pattern-circles.svg") no-repeat -20% 70%/50%, linear-gradient(90deg, #2c2d3f, #3f4164);
+  color: #c8c8cb;
+  border-radius: 0 5rem 0 5rem;
+}
+main .blue-section h1 {
+  color: white;
+}
+
+footer {
+  height: 33vh;
+  background: #25252d;
+  color: #c8c8cb;
+  border-top-right-radius: 5rem;
 }
 
 /*# sourceMappingURL=index.css.map */
