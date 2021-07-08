@@ -10,7 +10,7 @@ html {
 }
 
 header {
-  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  background: url("/images/bg-pattern-intro.svg") no-repeat 19% 51%/204%, linear-gradient(90deg, #ff8f70, #ff3d54);
   height: 45vh;
   border-bottom-left-radius: 5rem;
   display: flex;
@@ -88,29 +88,64 @@ main {
 }
 main section {
   padding: 0 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+main section img {
+  position: absolute;
+  top: 0;
+  right: 160px;
+  width: 54%;
+  height: auto;
+  transform: translate(50%, 0%);
+  z-index: -1;
+}
+main section .third-img {
+  right: unset;
+  transform: translate(-93%, 0);
 }
 main section h1 {
   margin: 3rem 0;
   color: #1f3f5b;
   text-align: center;
   font-size: 2rem;
+  align-self: center;
+  width: 50%;
 }
 main section h3 {
   margin: 1.5rem 0;
   color: #1f3f5b;
   font-weight: 800;
+  width: 50%;
 }
 main section p {
   margin: 1.5rem 0 5rem 0;
-  width: 45%;
+  width: 50%;
+  line-height: 175%;
+}
+main section:first-child {
+  align-items: flex-start;
 }
 main .blue-section {
-  background: url("./images/bg-pattern-circles.svg") no-repeat -20% 70%/50%, linear-gradient(90deg, #2c2d3f, #3f4164);
+  background: url("./images/bg-pattern-circles.svg") no-repeat -43% 81%/67%, linear-gradient(90deg, #2c2d3f, #3f4164);
+  overflow-y: visible;
   color: #c8c8cb;
   border-radius: 0 5rem 0 5rem;
 }
+main .blue-section img {
+  z-index: 1;
+  width: 38%;
+  transform: translate(-103%, -12%);
+}
 main .blue-section h1 {
   color: white;
+  align-self: unset;
+  text-align: left;
+}
+main section:last-child {
+  padding-top: 4rem;
 }
 
 footer {

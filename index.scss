@@ -15,7 +15,7 @@ html {
     font-size: 16px;
 }
 header {
-    background: $redorange;
+    background: url("/images/bg-pattern-intro.svg") no-repeat 19% 51% / 204%, $redorange;
     height: 45vh;
     border-bottom-left-radius: 5rem;
     display: flex;
@@ -89,32 +89,68 @@ main {
     align-items: center;
     margin: 3rem 0;
     color: $bodytext;
+
     section {
         padding: 0 10rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        img {
+            position: absolute;
+            top: 0;
+            right: 160px;
+            width: 54%;
+            height: auto;
+            transform: translate(50%, 0%);
+            z-index: -1;
+        }
+        .third-img {
+            right: unset;
+            transform: translate(-93%, 0);
+        }
         h1 {
             margin: 3rem 0;
             color: $darkblue;
             text-align: center;
             font-size: 2rem;
+            align-self: center;
+            width: 50%
         }
         h3 {
             margin: 1.5rem 0;
             color: $darkblue;
             font-weight: 800;
+            width: 50%;
         }
         p {
             margin: 1.5rem 0 5rem 0;
-            width: 45%;
+            width: 50%;
+            line-height: 175%;
         }
 
     }
+    section:first-child {
+        align-items: flex-start;
+    }
     .blue-section {
-        background: url('./images/bg-pattern-circles.svg') no-repeat -20% 70% / 50%, $blueblue;
+        background: url('./images/bg-pattern-circles.svg') no-repeat -43% 81% / 67%, $blueblue;
+        overflow-y: visible;
         color: $lightgraytext;
         border-radius: 0 5rem 0 5rem;
+        img {
+            z-index: 1;
+            width: 38%;
+            transform: translate(-103%,-12%);
+        }
         h1 {
             color: white;
+            align-self: unset;
+            text-align: left;
         }
+    }
+    section:last-child {
+        padding-top: 4rem;
     }
 }
 
