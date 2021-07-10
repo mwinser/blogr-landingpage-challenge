@@ -162,7 +162,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 2em;
+    padding: 5em 2em 3em 2em;
     .logo {
         height: 45px;
         width: 105px;
@@ -175,5 +175,6 @@ footer {
     li {
         list-style: none;
         padding: .5em 0;
+        cursor: pointer;
     }
 }

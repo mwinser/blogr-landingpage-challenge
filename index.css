@@ -156,7 +156,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 2em;
+  padding: 5em 2em 3em 2em;
 }
 footer .logo {
   height: 45px;
@@ -169,6 +169,7 @@ footer h4 {
 footer li {
   list-style: none;
   padding: 0.5em 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
