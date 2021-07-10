@@ -11,19 +11,20 @@ html {
 
 header {
   background: url("/images/bg-pattern-intro.svg") no-repeat 19% 51%/204%, linear-gradient(90deg, #ff8f70, #ff3d54);
-  height: 45vh;
+  min-height: 45vh;
   border-bottom-left-radius: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 2em 0;
 }
 header menu {
   width: 80vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 header menu .logo {
   height: 45px;
@@ -33,12 +34,44 @@ header menu .logo {
 }
 header menu nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: #c8c8cb;
   font-weight: bold;
   font-size: 14px;
   flex-grow: 1;
+}
+header menu nav .header-menu {
+  position: relative;
+  padding-right: 1em;
+  cursor: pointer;
+}
+header menu nav .header-menu:hover {
+  text-decoration: underline;
+}
+header menu nav .header-menu .hide {
+  visibility: hidden;
+}
+header menu nav .header-menu .dropdown {
+  background: white;
+  color: #4b5862;
+  font-weight: normal;
+  padding: 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 1.25em;
+  left: -1.75em;
+}
+header menu nav .header-menu .dropdown li {
+  list-style: none;
+  padding: 0.75em;
+  cursor: pointer;
+}
+header menu nav .header-menu .dropdown li:hover {
+  font-weight: bold;
+}
+header menu .cta-container {
+  color: white;
 }
 header #hero {
   color: white;
@@ -71,6 +104,7 @@ header #hero .dark {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: medium;
+  cursor: pointer;
 }
 
 .light {
@@ -170,6 +204,9 @@ footer li {
   list-style: none;
   padding: 0.5em 0;
   cursor: pointer;
+}
+footer li:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

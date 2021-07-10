@@ -16,18 +16,19 @@ html {
 }
 header {
     background: url("/images/bg-pattern-intro.svg") no-repeat 19% 51% / 204%, $redorange;
-    height: 45vh;
+    min-height: 45vh;
     border-bottom-left-radius: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 2em 0;
     menu {
         width: 80vw;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 4rem 0;
+        padding: 2rem 0;
         .logo {
             height: 45px;
             width: 105px;
@@ -36,12 +37,49 @@ header {
         }
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             color: $lightgraytext;
             font-weight: bold;
             font-size: 14px;
             flex-grow: 1;
+            
+            .header-menu {
+                position: relative;
+                padding-right: 1em;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                };
+                .hide {
+                    visibility: hidden;
+                }
+                .dropdown {
+                    
+                    background: white;
+                    color: $bodytext;
+                    font-weight: normal;
+                    padding: 1em;
+                    border-radius: .5em;
+                    position: absolute;
+                    top: 1.25em;
+                    left: -1.75em;
+                    li {
+                        list-style: none;
+                        padding: .75em;
+                        cursor: pointer;
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+                
+                }
+            }
+            
+        }
+        .cta-container {
+            color: white;
+            
         }
     }
     #hero {
@@ -74,6 +112,7 @@ header {
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: medium;
+        cursor: pointer;
     }
 }
 
@@ -176,5 +215,8 @@ footer {
         list-style: none;
         padding: .5em 0;
         cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
