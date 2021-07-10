@@ -153,6 +153,22 @@ footer {
   background: #25252d;
   color: #c8c8cb;
   border-top-right-radius: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2em;
+}
+footer .logo {
+  height: 45px;
+  width: 105px;
+  background: url("./images/logo.svg") no-repeat;
+}
+footer h4 {
+  padding-bottom: 2em;
+}
+footer li {
+  list-style: none;
+  padding: 0.5em 0;
 }
 
 /*# sourceMappingURL=index.css.map */
