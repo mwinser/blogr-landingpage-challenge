@@ -209,7 +209,7 @@ footer li:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 895px) {
   header {
     padding: 0 2.5em 2em 2.5em;
     text-align: center;
@@ -221,6 +221,9 @@ footer li:hover {
     padding: 1em 0;
   }
 
+  main {
+    margin: 0;
+  }
   main section, main .blue-section {
     padding: 2.5em;
     text-align: center;
@@ -229,6 +232,29 @@ footer li:hover {
   main section p, main section h3, main section h1, main .blue-section p, main .blue-section h3, main .blue-section h1 {
     width: unset;
     text-align: center;
+  }
+  main section h3, main .blue-section h3 {
+    font-size: 1.5em;
+  }
+  main section img, main .blue-section img {
+    position: unset;
+    transform: unset;
+    padding: 1em;
+  }
+  main section .second-img, main .blue-section .second-img {
+    transform: translateY(-45%);
+    position: absolute;
+    right: unset;
+  }
+  main section .third-img, main .blue-section .third-img {
+    transform: unset;
+  }
+  main section:first-child {
+    align-items: center;
+    padding-bottom: 6em;
+  }
+  main .blue-section {
+    padding-top: 7em;
   }
 }
 

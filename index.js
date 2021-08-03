@@ -8,3 +8,19 @@ Array.from(menus).map((menu,index)=>{
         dropdowns[index].classList.add("hide")
     })
 })
+
+let firstImg = document.querySelector(".first-img")
+let thirdImg = document.querySelector(".third-img")
+mobileGraphics()
+window.addEventListener("resize", mobileGraphics)
+
+
+function mobileGraphics() {
+    if (document.documentElement.clientWidth<=895) {
+        firstImg.src = "/images/illustration-editor-mobile.svg"
+        thirdImg.src = "/images/illustration-laptop-mobile.svg"
+    }else {
+        firstImg.src = "/images/illustration-editor-desktop.svg"
+        thirdImg.src = "/images/illustration-laptop-desktop.svg"
+    }
+}

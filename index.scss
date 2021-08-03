@@ -220,7 +220,7 @@ footer {
         }
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 895px) {
     header {
         padding: 0 2.5em 2em 2.5em;
         text-align: center;
@@ -234,6 +234,7 @@ footer {
         }
     }
     main {
+        margin: 0;
         section, .blue-section {
             padding: 2.5em;
             text-align: center;
@@ -242,7 +243,30 @@ footer {
                 width: unset;
                 text-align: center;
             }
+            h3 {
+                font-size: 1.5em;
+            }
+            img {
+                position: unset;
+                transform: unset;
+                padding: 1em;
+            }
+            .second-img {
+                transform: translateY(-45%);
+                position: absolute;
+                right: unset;
+            }
+            .third-img {
+                transform: unset;
+            }
             
+        }
+        section:first-child {
+            align-items: center;
+            padding-bottom: 6em;
+        }
+        .blue-section {
+            padding-top: 7em;
         }
     }
 }
