@@ -22,7 +22,6 @@ header {
 header menu {
   width: 80vw;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
 }
@@ -31,6 +30,14 @@ header menu .logo {
   width: 105px;
   background: url("./images/logo.svg") no-repeat;
   margin-right: 3rem;
+}
+header menu .full-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+header menu .icon-hide {
+  display: none;
 }
 header menu nav {
   display: flex;
@@ -214,6 +221,60 @@ footer li:hover {
     padding: 0 2.5em 2em 2.5em;
     text-align: center;
   }
+  header menu {
+    justify-content: space-between;
+  }
+  header menu .menu-hide {
+    display: none;
+  }
+  header menu .hamburger {
+    cursor: pointer;
+  }
+  header menu .full-menu {
+    position: absolute;
+    top: 100px;
+    left: 1.75em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 1.25em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+  }
+  header menu .full-menu nav {
+    flex-direction: column;
+    font-size: 1.5em;
+    padding: 1em;
+    width: 100%;
+  }
+  header menu .full-menu nav .header-menu {
+    padding: 0.5em 0;
+    width: 100%;
+    color: #2c2d3f;
+  }
+  header menu .full-menu nav .header-menu .dropdown {
+    visibility: hidden;
+    background-color: #e5e5e6;
+  }
+  header menu .full-menu nav .header-menu .show {
+    position: unset;
+    visibility: unset;
+  }
+  header menu .full-menu .cta-container {
+    flex-direction: column;
+    border-top: 2px solid gray;
+    width: 50%;
+    color: #1f3f5b;
+  }
+  header menu .full-menu .cta-container .cta {
+    font-size: 1.5em;
+  }
+  header menu .full-menu .cta-container .light {
+    color: white;
+    background-color: #ff3d54;
+  }
   header #hero h1 {
     font-size: 2em;
   }
@@ -255,6 +316,13 @@ footer li:hover {
   }
   main .blue-section {
     padding-top: 7em;
+  }
+}
+@media (max-width: 450px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: unset;
   }
 }
 

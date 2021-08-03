@@ -7,20 +7,44 @@ Array.from(menus).map((menu,index)=>{
     menu.addEventListener("mouseleave", ()=>{
         dropdowns[index].classList.add("hide")
     })
+    menu.addEventListener("click", ()=>{
+        dropdowns[index].classList.toggle("show")
+    })
 })
+
+
 
 let firstImg = document.querySelector(".first-img")
 let thirdImg = document.querySelector(".third-img")
-mobileGraphics()
-window.addEventListener("resize", mobileGraphics)
+let fullMenu = document.querySelector(".full-menu")
+let hamburger = document.querySelector(".hamburger")
 
+responsiveChanges()
+window.addEventListener("resize", responsiveChanges)
+hamburger.addEventListener("click", toggleMenu)
+let isMenuOpen = false
 
-function mobileGraphics() {
+function responsiveChanges() {
     if (document.documentElement.clientWidth<=895) {
         firstImg.src = "/images/illustration-editor-mobile.svg"
         thirdImg.src = "/images/illustration-laptop-mobile.svg"
+        fullMenu.classList.add("menu-hide")
+        hamburger.classList.remove("icon-hide")
     }else {
         firstImg.src = "/images/illustration-editor-desktop.svg"
         thirdImg.src = "/images/illustration-laptop-desktop.svg"
+        fullMenu.classList.remove("menu-hide")
+        hamburger.classList.add("icon-hide")
     }
+}
+
+function toggleMenu() {
+    fullMenu.classList.toggle("menu-hide")
+    isMenuOpen = !isMenuOpen
+    if (isMenuOpen) {
+        hamburger.firstElementChild.src = "/images/icon-close.svg"
+    } else {
+        hamburger.firstElementChild.src = "/images/icon-hamburger.svg"
+    }
+    console.log()
 }

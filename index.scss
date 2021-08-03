@@ -26,7 +26,6 @@ header {
     menu {
         width: 80vw;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         padding: 2rem 0;
         .logo {
@@ -34,6 +33,14 @@ header {
             width: 105px;
             background: url("./images/logo.svg") no-repeat;
             margin-right: 3rem;
+        }
+        .full-menu {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .icon-hide {
+            display: none;
         }
         nav {
             display: flex;
@@ -224,6 +231,60 @@ footer {
     header {
         padding: 0 2.5em 2em 2.5em;
         text-align: center;
+        menu {
+            justify-content: space-between;
+            .menu-hide {
+                display: none;
+            }
+            .hamburger {
+                cursor: pointer;
+            }
+            .full-menu {
+                position: absolute;
+                top: 100px;
+                left: 1.75em;
+                padding: 2em;
+                background-color: white;
+                border-radius: 1.25em;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 15px 10px rgba(0,0,0,.12) ;
+                z-index: 1;
+                nav {
+                    flex-direction: column;
+                    font-size: 1.5em;
+                    padding: 1em;
+                    width: 100%;
+                    .header-menu {
+                        padding: .5em 0;
+                        width: 100%;
+                        color:hsl(237, 17%, 21%);
+                        .dropdown {
+                            visibility: hidden;
+                            background-color: hsl(240, 2%, 90%);
+                        }
+                        .show {
+                            position: unset;
+                            visibility: unset;
+                        }
+                    }
+                }
+                .cta-container {
+                    flex-direction: column;
+                    border-top: 2px solid gray;
+                    width: 50%;
+                    color:hsl(208, 49%, 24%);
+                    .cta {
+                        font-size: 1.5em;
+                    }
+                    .light {
+                        color: white;
+                        background-color:hsl(353, 100%, 62%)
+                    }
+                }
+            }
+        }
         #hero {
             h1 {
                 font-size: 2em;
@@ -268,5 +329,13 @@ footer {
         .blue-section {
             padding-top: 7em;
         }
+    }
+
+}
+@media (max-width: 450px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: unset;
     }
 }
