@@ -220,3 +220,29 @@ footer {
         }
     }
 }
+@media (max-width: 375px) {
+    header {
+        padding: 0 2.5em 2em 2.5em;
+        text-align: center;
+        #hero {
+            h1 {
+                font-size: 2em;
+            }
+            h4 {
+                padding: 1em 0;
+            }
+        }
+    }
+    main {
+        section, .blue-section {
+            padding: 2.5em;
+            text-align: center;
+            align-items: center;
+            p,h3,h1 {
+                width: unset;
+                text-align: center;
+            }
+            
+        }
+    }
+}

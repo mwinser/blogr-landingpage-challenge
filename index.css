@@ -209,4 +209,27 @@ footer li:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 375px) {
+  header {
+    padding: 0 2.5em 2em 2.5em;
+    text-align: center;
+  }
+  header #hero h1 {
+    font-size: 2em;
+  }
+  header #hero h4 {
+    padding: 1em 0;
+  }
+
+  main section, main .blue-section {
+    padding: 2.5em;
+    text-align: center;
+    align-items: center;
+  }
+  main section p, main section h3, main section h1, main .blue-section p, main .blue-section h3, main .blue-section h1 {
+    width: unset;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
