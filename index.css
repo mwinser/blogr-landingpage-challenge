@@ -49,8 +49,14 @@ header menu nav {
 }
 header menu nav .header-menu {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-right: 1em;
   cursor: pointer;
+}
+header menu nav .header-menu span {
+  padding-right: 0.5em;
 }
 header menu nav .header-menu span:hover {
   text-decoration: underline;
@@ -68,6 +74,7 @@ header menu nav .header-menu .dropdown {
   position: absolute;
   top: 1.25em;
   left: -1.75em;
+  width: 7em;
 }
 header menu nav .header-menu .dropdown li {
   list-style: none;
@@ -93,6 +100,7 @@ header #hero h1 {
 header #hero h4 {
   color: #efefef;
   font-weight: normal;
+  padding: 1em 0;
 }
 header #hero .dark {
   border: 1px solid white;
@@ -138,7 +146,7 @@ main section img {
   position: absolute;
   top: 0;
   right: 160px;
-  width: 54%;
+  max-width: 54%;
   height: auto;
   transform: translate(50%, 0%);
   z-index: -1;
@@ -174,11 +182,14 @@ main .blue-section {
   overflow-y: visible;
   color: #efefef;
   border-radius: 0 5rem 0 5rem;
+  margin: 3em 0;
 }
 main .blue-section img {
   z-index: 1;
-  width: 38%;
-  transform: translate(-103%, -12%);
+  max-width: 38%;
+  right: unset;
+  left: 7em;
+  transform: translateY(-12%);
 }
 main .blue-section h1 {
   color: white;
@@ -255,15 +266,20 @@ footer li:hover {
     width: 100%;
   }
   header menu .full-menu nav .header-menu {
+    display: unset;
     padding: 0.5em 0;
     width: 100%;
     color: #2c2d3f;
+  }
+  header menu .full-menu nav .header-menu img {
+    padding: 0.1em 0;
   }
   header menu .full-menu nav .header-menu .dropdown {
     visibility: hidden;
     background-color: #e5e5e6;
     font-size: 0.75em;
     margin: 1em 0;
+    width: unset;
   }
   header menu .full-menu nav .header-menu .show {
     position: unset;
@@ -283,8 +299,11 @@ footer li:hover {
     color: white;
     background-color: #ff3d54;
   }
+  header #hero {
+    padding: 5em 0;
+  }
   header #hero h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
   header #hero h4 {
     padding: 1em 0;
@@ -296,6 +315,7 @@ footer li:hover {
   }
   main section, main .blue-section {
     padding: 2.5em;
+    margin: unset;
     text-align: center;
     align-items: center;
   }
@@ -309,6 +329,7 @@ footer li:hover {
   main section img, main .blue-section img {
     position: unset;
     transform: unset;
+    left: unset;
     padding: 1em;
   }
   main section .second-img, main .blue-section .second-img {
@@ -333,12 +354,6 @@ footer li:hover {
   }
   header menu {
     padding: 3em 0;
-  }
-  header #hero {
-    padding: 5em 0;
-  }
-  header #hero h1 {
-    font-size: 2.5em;
   }
   header #hero h4 {
     font-size: 1.25em;

@@ -52,9 +52,13 @@ header {
             
             .header-menu {
                 position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 padding-right: 1em;
                 cursor: pointer;
                 span {
+                    padding-right: .5em;
                     &:hover {
                     text-decoration: underline;
                     }
@@ -72,6 +76,7 @@ header {
                     position: absolute;
                     top: 1.25em;
                     left: -1.75em;
+                    width: 7em;
                     li {
                         list-style: none;
                         padding: .75em;
@@ -103,6 +108,7 @@ header {
         h4 {
             color: $lightgraytext;
             font-weight: normal; 
+            padding: 1em 0;
         }
         .dark {
             border: 1px solid white;
@@ -148,7 +154,7 @@ main {
             position: absolute;
             top: 0;
             right: 160px;
-            width: 54%;
+            max-width: 54%;
             height: auto;
             transform: translate(50%, 0%);
             z-index: -1;
@@ -186,10 +192,13 @@ main {
         overflow-y: visible;
         color: $lightgraytext;
         border-radius: 0 5rem 0 5rem;
+        margin: 3em 0;
         img {
             z-index: 1;
-            width: 38%;
-            transform: translate(-103%,-12%);
+            max-width: 38%;
+            right: unset;
+            left: 7em;
+            transform: translateY(-12%);
         }
         h1 {
             color: white;
@@ -263,14 +272,19 @@ footer {
                     padding: 1em;
                     width: 100%;
                     .header-menu {
+                        display: unset;
                         padding: .5em 0;
                         width: 100%;
                         color:hsl(237, 17%, 21%);
+                        img {
+                            padding: .1em 0;
+                        }
                         .dropdown {
                             visibility: hidden;
                             background-color: hsl(240, 2%, 90%);
                             font-size: .75em;
                             margin: 1em 0;
+                            width: unset;
                         }
                         .show {
                             position: unset;
@@ -296,8 +310,9 @@ footer {
             }
         }
         #hero {
+            padding: 5em 0;
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             h4 {
                 padding: 1em 0;
@@ -309,6 +324,7 @@ footer {
         margin: 0;
         section, .blue-section {
             padding: 2.5em;
+            margin: unset;
             text-align: center;
             align-items: center;
             p,h3,h1 {
@@ -321,6 +337,7 @@ footer {
             img {
                 position: unset;
                 transform: unset;
+                left: unset;
                 padding: 1em;
                 
             }
@@ -351,10 +368,6 @@ footer {
             padding: 3em 0;
         }
         #hero {
-            padding: 5em 0;
-            h1 {
-                font-size: 2.5em;
-            }
             h4 {
                 font-size: 1.25em;
             }
