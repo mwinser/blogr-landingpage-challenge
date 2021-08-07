@@ -9,6 +9,8 @@ Array.from(menus).map((menu,index)=>{
     })
     menu.addEventListener("click", ()=>{
         dropdowns[index].classList.toggle("show")
+        dropdowns[index].parentElement.querySelector("img").classList.toggle("rotate180")
+
     })
 })
 

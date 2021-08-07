@@ -4,7 +4,6 @@
 }
 
 html {
-  font-family: "Ubuntu", sans-serif;
   font-family: "Overpass", sans-serif;
   font-size: 16px;
 }
@@ -43,7 +42,7 @@ header menu nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: #c8c8cb;
+  color: #efefef;
   font-weight: bold;
   font-size: 14px;
   flex-grow: 1;
@@ -53,13 +52,14 @@ header menu nav .header-menu {
   padding-right: 1em;
   cursor: pointer;
 }
-header menu nav .header-menu:hover {
+header menu nav .header-menu span:hover {
   text-decoration: underline;
 }
 header menu nav .header-menu .hide {
   visibility: hidden;
 }
 header menu nav .header-menu .dropdown {
+  text-decoration: unset;
   background: white;
   color: #4b5862;
   font-weight: normal;
@@ -91,7 +91,7 @@ header #hero h1 {
   font-size: 4rem;
 }
 header #hero h4 {
-  color: #c8c8cb;
+  color: #efefef;
   font-weight: normal;
 }
 header #hero .dark {
@@ -172,7 +172,7 @@ main section:first-child {
 main .blue-section {
   background: url("./images/bg-pattern-circles.svg") no-repeat -43% 81%/67%, linear-gradient(90deg, #2c2d3f, #3f4164);
   overflow-y: visible;
-  color: #c8c8cb;
+  color: #efefef;
   border-radius: 0 5rem 0 5rem;
 }
 main .blue-section img {
@@ -192,7 +192,7 @@ main section:last-child {
 footer {
   height: 33vh;
   background: #25252d;
-  color: #c8c8cb;
+  color: #efefef;
   border-top-right-radius: 5rem;
   display: flex;
   justify-content: space-around;
@@ -216,6 +216,10 @@ footer li:hover {
   text-decoration: underline;
 }
 
+.rotate180 {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 895px) {
   header {
     padding: 0 2.5em 2em 2.5em;
@@ -233,7 +237,8 @@ footer li:hover {
   header menu .full-menu {
     position: absolute;
     top: 100px;
-    left: 1.75em;
+    right: 5vw;
+    width: 70vw;
     padding: 2em;
     background-color: white;
     border-radius: 1.25em;
@@ -257,6 +262,8 @@ footer li:hover {
   header menu .full-menu nav .header-menu .dropdown {
     visibility: hidden;
     background-color: #e5e5e6;
+    font-size: 0.75em;
+    margin: 1em 0;
   }
   header menu .full-menu nav .header-menu .show {
     position: unset;
@@ -264,12 +271,13 @@ footer li:hover {
   }
   header menu .full-menu .cta-container {
     flex-direction: column;
-    border-top: 2px solid gray;
-    width: 50%;
+    border-top: 2px solid lightgray;
+    width: 100%;
     color: #1f3f5b;
   }
   header menu .full-menu .cta-container .cta {
     font-size: 1.5em;
+    font-family: "Overpass";
   }
   header menu .full-menu .cta-container .light {
     color: white;
@@ -280,6 +288,7 @@ footer li:hover {
   }
   header #hero h4 {
     padding: 1em 0;
+    color: white;
   }
 
   main {
@@ -319,10 +328,56 @@ footer li:hover {
   }
 }
 @media (max-width: 450px) {
+  header {
+    background: url("/images/bg-pattern-intro.svg") no-repeat 37% 30%/321%, linear-gradient(90deg, #ff8f70, #ff3d54);
+  }
+  header menu {
+    padding: 3em 0;
+  }
+  header #hero {
+    padding: 5em 0;
+  }
+  header #hero h1 {
+    font-size: 2.5em;
+  }
+  header #hero h4 {
+    font-size: 1.25em;
+  }
+
+  main section img {
+    width: 134%;
+  }
+  main section h3 {
+    font-size: 2em;
+  }
+  main section h1 {
+    font-size: 2.75em;
+    margin-top: 3em;
+  }
+  main section p {
+    font-size: 1.25em;
+  }
+  main .blue-section {
+    margin-top: 5em;
+  }
+  main .blue-section img {
+    width: 90%;
+  }
+
   footer {
     flex-direction: column;
     align-items: center;
     height: unset;
+  }
+  footer .logo {
+    padding-bottom: 2.5em;
+  }
+  footer .footer-list {
+    font-size: 1.3em;
+    padding: 2em 0;
+  }
+  footer .footer-list h4 {
+    color: white;
   }
 }
 

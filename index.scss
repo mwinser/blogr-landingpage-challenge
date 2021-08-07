@@ -1,6 +1,6 @@
 $redorange: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 $blueblue: linear-gradient(90deg,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-$lightgraytext: hsl(240, 2%, 79%);
+$lightgraytext: #efefef;
 $bodytext:  hsl(207, 13%, 34%);
 $lightred: hsl(356, 100%, 66%);
 $darkblue: hsl(208, 49%, 24%);
@@ -10,7 +10,6 @@ $darkblue: hsl(208, 49%, 24%);
 }
 
 html {
-    font-family: 'Ubuntu', sans-serif;
     font-family: 'Overpass', sans-serif;
     font-size: 16px;
 }
@@ -55,14 +54,16 @@ header {
                 position: relative;
                 padding-right: 1em;
                 cursor: pointer;
-                &:hover {
+                span {
+                    &:hover {
                     text-decoration: underline;
-                };
+                    }
+                }
                 .hide {
                     visibility: hidden;
                 }
                 .dropdown {
-                    
+                    text-decoration: unset;
                     background: white;
                     color: $bodytext;
                     font-weight: normal;
@@ -75,6 +76,7 @@ header {
                         list-style: none;
                         padding: .75em;
                         cursor: pointer;
+                        
                         &:hover {
                             font-weight: bold;
                         }
@@ -227,6 +229,9 @@ footer {
         }
     }
 }
+.rotate180 {
+    transform: rotate(180deg);
+}
 @media (max-width: 895px) {
     header {
         padding: 0 2.5em 2em 2.5em;
@@ -242,7 +247,8 @@ footer {
             .full-menu {
                 position: absolute;
                 top: 100px;
-                left: 1.75em;
+                right: 5vw;
+                width: 70vw;
                 padding: 2em;
                 background-color: white;
                 border-radius: 1.25em;
@@ -263,6 +269,8 @@ footer {
                         .dropdown {
                             visibility: hidden;
                             background-color: hsl(240, 2%, 90%);
+                            font-size: .75em;
+                            margin: 1em 0;
                         }
                         .show {
                             position: unset;
@@ -272,11 +280,13 @@ footer {
                 }
                 .cta-container {
                     flex-direction: column;
-                    border-top: 2px solid gray;
-                    width: 50%;
+                    border-top: 2px solid lightgray;
+                    width: 100%;
                     color:hsl(208, 49%, 24%);
                     .cta {
                         font-size: 1.5em;
+                        font-family: "Overpass";
+                        
                     }
                     .light {
                         color: white;
@@ -291,6 +301,7 @@ footer {
             }
             h4 {
                 padding: 1em 0;
+                color: white;
             }
         }
     }
@@ -311,6 +322,7 @@ footer {
                 position: unset;
                 transform: unset;
                 padding: 1em;
+                
             }
             .second-img {
                 transform: translateY(-45%);
@@ -333,9 +345,61 @@ footer {
 
 }
 @media (max-width: 450px) {
+    header {
+        background: url("/images/bg-pattern-intro.svg") no-repeat 37% 30% / 321%, $redorange;
+        menu {
+            padding: 3em 0;
+        }
+        #hero {
+            padding: 5em 0;
+            h1 {
+                font-size: 2.5em;
+            }
+            h4 {
+                font-size: 1.25em;
+            }
+        }
+    }
+    main {
+        section {
+            img {
+                width: 134%;
+            }
+            h3 {
+                font-size: 2em;
+            }
+            h1 {
+                font-size: 2.75em;
+                margin-top: 3em;
+            }
+            p {
+                font-size: 1.25em;
+                
+            }
+        }
+        .blue-section {
+            margin-top: 5em;
+            img {
+                width: 90%;
+            }
+        }
+    }
+    
+    
+    
     footer {
         flex-direction: column;
         align-items: center;
         height: unset;
+        .logo {
+            padding-bottom: 2.5em;
+        }
+        .footer-list {
+            font-size: 1.3em;
+            padding: 2em 0;
+            h4 {
+                color: white;
+            }
+        }
     }
 }
